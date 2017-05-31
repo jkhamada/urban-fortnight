@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ad Trips</title>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'index' %}">Logout</a></li>
+      </ul>
+    </header>
+    <div class="container">
+      <h2>Add Trip</h2>
+      <form class="" action="/trip_add" method="post">
+      {% csrf_token %}
+      <input type="text" name="{% url 'trip_add' %}"  placeholder="Destination:" ><br>
+      <input type="text" name="description"  placeholder="Description:" value=""><br>
+      <input type="date" name="travel_date_from"  placeholder="Travel Date From:" value=""><br>
+      <input type="text" name="travel_date_to"  placeholder="Travel Date To:" value=""><br>
+      <input type="submit" value="Add">
+    </div>
+  </body>
+</html>

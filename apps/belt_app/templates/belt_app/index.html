@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div>
+        <h1>Register</h1>
+    <form class="" action="/register" method="post">
+      {% csrf_token %}
+      <input type="text" name="name"  placeholder="Name:" value=""><br>
+      <input type="text" name="username"  placeholder="Username:" value=""><br>
+      <input type="text" name="password"  placeholder="Password:" value=""><br>
+      <input type="text" name="confirm_password"  placeholder="Confirm Password:" value=""><br>
+      <input type="submit" value="Register">
+
+    </form>
+  </div>
+  <div>
+      <h1>Login</h1>
+      <form class="" action="/login" method="post">
+        {% csrf_token %}
+        <input type="text" name="username"  placeholder="Username:" value=""><br>
+        <input type="text" name="password"  placeholder="Password:" value=""><br>
+        <input type="submit" value="Login">
+      </form>
+  </div>
+  </body>
+</html>
